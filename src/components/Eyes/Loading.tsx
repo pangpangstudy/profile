@@ -1,9 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import sunwukong from "../../assets/images/sunwukong.png";
-type Props = {};
 
-const Loading = (props: Props) => {
+const Loading = () => {
   useGSAP(() => {
     gsap.to(".load .line", {
       width: "100%",
