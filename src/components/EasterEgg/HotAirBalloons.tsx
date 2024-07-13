@@ -1,18 +1,20 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
-import HotAirBalloonImg from "../../assets/images/hot-air-balloon.png";
+import sunwukong from "../../assets/images/sunwukong.png";
 import { FallingHotAirBalloonsProps } from ".";
 import { useGSAP } from "@gsap/react";
 
 const HotAirBalloons: React.FC<
   React.PropsWithChildren<FallingHotAirBalloonsProps>
-> = ({ endHandle, count = 10, size = 100, duration = 5 }) => {
+> = ({ endHandle, count = 50, size = 100, duration = 3 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  let count1 = window.innerWidth > 1140 ? 50 : 30;
   useGSAP(() => {
     const hotAirBalloons = containerRef.current?.children;
     gsap.to(hotAirBalloons!, {
-      y: "-100vh",
+      x: "-120vw",
       opacity: 0,
+      transform: "rotate(-20deg)",
       stagger: {
         each: duration / count,
       },
@@ -20,7 +22,7 @@ const HotAirBalloons: React.FC<
       ease: "linear",
       onStart: () => {
         gsap.to(hotAirBalloons!, {
-          rotation: 20,
+          // rotation: 20,
           duration: 1,
           yoyo: true,
           repeat: -1,
@@ -30,19 +32,19 @@ const HotAirBalloons: React.FC<
       onComplete: endHandle,
     });
   });
-  const hotAirBalloonElements = [...Array(count)].map((_, index) => (
+  const hotAirBalloonElements = [...Array(count1)].map((_, index) => (
     <div
       key={String(index)}
       style={{
         position: "fixed",
-        bottom: 0,
-        left: `${Math.random() * 100}vw`,
-        transform: "rotate(-20deg)",
+        right: 0,
+        bottom: `${Math.random() * 100}vh`,
+        // transform: "rotate(-20deg)",
         pointerEvents: "none",
         zIndex: 99999,
       }}
     >
-      <img src={HotAirBalloonImg} alt="" width={size} height={size} />
+      <img src={sunwukong} alt="" width={size} height={size} />
     </div>
   ));
 
