@@ -1,7 +1,7 @@
 import Eyes from "../Eyes";
 import Loading from "../Eyes/Loading";
 import { useEffect, useState } from "react";
-import geishenhua from "../../assets/images/heishenhua.png";
+import bg from "../../assets/images/heishenhuayasuo.png";
 type Props = {};
 
 function Hero({}: Props) {
@@ -21,8 +21,10 @@ function Hero({}: Props) {
   }, []);
   return (
     <div
-      style={{ backgroundImage: `url(${geishenhua})` }}
-      className="hero  w-full h-screen relative flex flex-col justify-center items-center bg-cover bg-center"
+      style={{
+        backgroundImage: `url('${bg}')`,
+      }}
+      className="hero  w-full h-screen relative flex flex-col justify-center items-center  bg-cover bg-center"
     >
       <Eyes />
       <div className="text-white my-20 text-[6vw] cursor-pointer">
