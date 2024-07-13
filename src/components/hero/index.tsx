@@ -1,29 +1,34 @@
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 import Eyes from "../Eyes";
-
+import Loading from "../Eyes/Loading";
+import { useEffect, useState } from "react";
+import geishenhua from "../../assets/images/heishenhua.png";
 type Props = {};
 
 function Hero({}: Props) {
-  useGSAP(
-    () => {
-      const tl = gsap.timeline();
-      tl.fromTo(
-        ".drop-text",
-        {
-          y: "-50vh",
-          duration: 2,
-
-          ease: "bounce.out",
-        },
-        { color: "transparent" }
-      );
-    },
-    { scope: ".hero" }
-  );
+  const [count, setCount] = useState<number>(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCount((state) => {
+        if (state < 100) {
+          return state + 1;
+        } else {
+          clearInterval(id);
+          return 100;
+        }
+      });
+    }, 45);
+    () => clearInterval(id);
+  }, []);
   return (
-    <div className="hero   w-full h-screen bg-black flex justify-center items-center">
+    <div
+      style={{ backgroundImage: `url(${geishenhua})` }}
+      className="hero  w-full h-screen relative flex flex-col justify-center items-center bg-cover bg-center"
+    >
       <Eyes />
+      <div className="text-white my-20 text-[6vw] cursor-pointer">
+        {count} %
+      </div>
+      <Loading />
     </div>
   );
 }

@@ -29,33 +29,44 @@ function Eyes() {
   }, []);
 
   return (
-    <div className="eyes w-full h-screen overflow-hidden">
-      <div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[100%] flex items-center gap-10 md:gap-x-20">
-          <div className="flex items-center justify-center w-[15vw] h-[15vw] rounded-full bg-zinc-100">
-            <div className="relative w-2/3 h-2/3  rounded-full bg-zinc-900 flex items-center justify-center">
-              <div
-                ref={refL}
-                style={{
-                  transform: `rotate(${rotateL}deg)`,
-                }}
-                className="line  w-full h-15  z-10 "
-              >
-                <div className="w-10 h-10  rounded-full bg-zinc-100"></div>
-              </div>
+    <div className="eyes flex flex-col items-center w-full overflow-hidden py-20 opacity-75">
+      <div className="flex items-center gap-x-10 md:gap-x-20">
+        <div className="flex items-center justify-center w-[15vw] h-[15vw] rounded-full bg-[#746870]">
+          <div className="relative w-2/3 h-2/3  rounded-full bg-[#c73d1f] flex items-center justify-center">
+            <div
+              ref={refL}
+              style={{
+                transform: `rotate(${rotateL}deg)`,
+              }}
+              className="line  w-full h-15  z-10 "
+            >
+              <div className="w-10 h-10  rounded-full bg-[#0d0602]"></div>
             </div>
           </div>
-          <div className="flex items-center justify-center w-[15vw] h-[15vw] rounded-full bg-zinc-100">
-            <div className="relative w-2/3 h-2/3  rounded-full bg-zinc-900 flex items-center justify-center">
-              <div
-                ref={refR}
-                style={{
-                  transform: `rotate(${rotateR}deg)`,
-                }}
-                className="line  w-full h-15  z-10 "
-              >
-                <div className="w-10 h-10  rounded-full bg-zinc-100"></div>
-              </div>
+        </div>
+        {/* <div className="flex items-center justify-center w-[15vw] h-[15vw] rounded-full bg-zinc-100">
+          <div className="relative w-2/3 h-2/3  rounded-full bg-zinc-900 flex items-center justify-center">
+            <div
+              ref={refR}
+              style={{
+                transform: `rotate(${rotateR}deg)`,
+              }}
+              className="line  w-full h-15  z-10 "
+            >
+              <div className="w-10 h-10  rounded-full bg-zinc-100"></div>
+            </div>
+          </div>
+        </div> */}
+        <div className="flex items-center justify-center w-[15vw] h-[15vw] rounded-full bg-[#746870]">
+          <div className="relative w-2/3 h-2/3  rounded-full bg-[#c73d1f] flex items-center justify-center">
+            <div
+              ref={refR}
+              style={{
+                transform: `rotate(${rotateR}deg)`,
+              }}
+              className="line  w-full h-15  z-10 "
+            >
+              <div className="w-10 h-10  rounded-full bg-[#0d0602]"></div>
             </div>
           </div>
         </div>

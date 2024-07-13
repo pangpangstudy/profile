@@ -7,7 +7,7 @@ const EasterEgg = lazy(() => import("./components/EasterEgg"));
 function App() {
   return (
     // 从上下落文字 加载页面
-    <main className="overflow-hidden relative w-full min-h-screen">
+    <main className="overflow-hidden relative w-full min-h-screen bg-[#dcdcdc]">
       <EasterEgg />
       <ImageFollowMouse />
       <Hero />

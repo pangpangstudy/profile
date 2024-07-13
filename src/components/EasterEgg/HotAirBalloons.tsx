@@ -45,6 +45,7 @@ const HotAirBalloons: React.FC<
       }}
     >
       <img src={sunwukong} alt="" width={size} height={size} />
+      <p>支持黑神话：悟空</p>
     </div>
   ));
 
