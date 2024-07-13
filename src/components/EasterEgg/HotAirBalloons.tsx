@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import HotAirBalloonImg from "../../assets/images/hot-air-balloon.png";
 import { FallingHotAirBalloonsProps } from ".";
@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 
 const HotAirBalloons: React.FC<
   React.PropsWithChildren<FallingHotAirBalloonsProps>
-> = ({ endHandle, count = 10, size = 100, iterations = 2, duration = 5 }) => {
+> = ({ endHandle, count = 10, size = 100, duration = 5 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   useGSAP(() => {
     const hotAirBalloons = containerRef.current?.children;

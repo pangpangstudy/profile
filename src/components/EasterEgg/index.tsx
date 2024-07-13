@@ -1,10 +1,4 @@
-import React, {
-  lazy,
-  startTransition,
-  Suspense,
-  useCallback,
-  useState,
-} from "react";
+import React, { lazy, startTransition, useCallback, useState } from "react";
 import useKonamiCheatCode from "./hook";
 const HotAirBalloons = lazy(() => import("./HotAirBalloons"));
 
