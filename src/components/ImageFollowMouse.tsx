@@ -33,7 +33,7 @@ const ImageFollowMouse = () => {
             key={index}
             src={sunwukong}
             alt="Follow Mouse"
-            className="fixed top-0 left-0 h-12  opacity-0 "
+            className="fixed top-0 left-0 h-12  opacity-0  z-[999]"
           />
         );
       })}
