@@ -27,13 +27,13 @@ const ImageFollowMouse = () => {
 
   return (
     <div className="imgContainer">
-      {new Array(8).fill(null).map((_, index) => {
+      {new Array(2).fill(null).map((_, index) => {
         return (
           <img
             key={index}
             src={sunwukong}
             alt="Follow Mouse"
-            className="fixed top-0 left-0 h-12  opacity-0  z-[999]"
+            className="fixed top-4 left-4 h-12  opacity-0  z-[999]"
           />
         );
       })}

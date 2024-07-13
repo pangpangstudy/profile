@@ -39,7 +39,7 @@ const HotAirBalloons: React.FC<
         position: "fixed",
         right: 0,
         bottom: `${Math.random() * 100}vh`,
-        // transform: "rotate(-20deg)",
+        transform: "translateX(100%)",
         pointerEvents: "none",
         zIndex: 99999,
       }}

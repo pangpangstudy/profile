@@ -11,7 +11,7 @@ function App() {
       <EasterEgg />
       <ImageFollowMouse />
       <Hero />
-      <p className="absolute bottom-0 left-0 text-white">
+      <p className="absolute bottom-0 left-0 text-transparent text-clip bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 z-50">
         键盘：上上下下左左右右：触发彩蛋
       </p>
     </main>
