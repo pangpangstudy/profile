@@ -12,7 +12,7 @@ function App() {
       <ImageFollowMouse />
       <Hero />
       <p className="absolute bottom-0 left-0 text-white">
-        键盘：上上下下左右右：触发彩蛋
+        键盘：上上下下左左右右：触发彩蛋
       </p>
     </main>
   );
