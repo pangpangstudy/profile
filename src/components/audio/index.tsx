@@ -1,26 +1,38 @@
-// import React, { useRef } from "react";
+import { useRef, useState } from "react";
+import music from "../../assets/music.mp3";
+import { MdOutlineMusicNote } from "react-icons/md";
+import { MdOutlineMusicOff } from "react-icons/md";
+type Props = {};
 
-// type Props = {};
+function Audio({}: Props) {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const handleToggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
-// function Audio({}: Props) {
-//   const audioRef = useRef(null);
+  return (
+    <div>
+      <button
+        onClick={() => handleToggleAudio()}
+        className="fixed top-4 right-4 h-12 w-12 p-2 border border-red-600 flex justify-center items-center rounded-full cursor-pointer z-20"
+      >
+        {isPlaying ? (
+          <MdOutlineMusicNote color="#d7c526" className="w-full h-full" />
+        ) : (
+          <MdOutlineMusicOff color="#d7c526" className="w-full h-full" />
+        )}
+      </button>
+      <audio ref={audioRef} src={music} />
+    </div>
+  );
+}
 
-//   const handlePlayAudio = () => {
-//     if (audioRef.current) {
-//       audioRef.current.play();
-//     }
-//   };
-//   return (
-//     <div>
-//       <button
-//         onClick={handlePlayAudio}
-//         className="fixed top-4 right-4 bg-blue-500 text-white p-2 rounded z-50"
-//       >
-//         播放音频
-//       </button>
-//       <audio ref={audioRef} src="/path/to/your/audio.mp3" />
-//     </div>
-//   );
-// }
-
-// export default Audio;
+export default Audio;

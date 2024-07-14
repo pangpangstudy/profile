@@ -22,37 +22,34 @@ function Hero({}: Props) {
     }, 19);
     () => clearInterval(id);
   }, []);
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({
-        onComplete: () => {},
-      });
-      tl.to(".load .line", {
-        width: "100%",
-        duration: 2,
-        ease: "none",
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      onComplete: () => {},
+    });
+    tl.to(".load .line", {
+      width: "100%",
+      duration: 2,
+      ease: "none",
+    })
+      .to(".hero", {
+        opacity: 0,
+        y: "-100%",
+        duration: 1,
       })
-        .to(".hero", {
-          opacity: 0,
-          y: "-100%",
-          duration: 1,
-        })
-        .to(".hero", {
-          display: "none",
-          duration: 0.3,
-        })
-        .from(".textBox span", {
-          opacity: 0,
-          ease: Expo.easeInOut,
-          stagger: 0.1,
-        })
-        .from(".heroContainer .eyes", {
-          opacity: 0,
-          duration: 1,
-        });
-    },
-    { scope: ".heroContainer" }
-  );
+      .to(".hero", {
+        display: "none",
+        duration: 0.3,
+      })
+      .from(".textBox span", {
+        opacity: 0,
+        ease: Expo.easeInOut,
+        stagger: 0.1,
+      })
+      .from(".heroContainer .eyes", {
+        opacity: 0,
+        duration: 1,
+      });
+  });
 
   return (
     <div className="heroContainer relative h-screen flex items-center overflow-hidden">

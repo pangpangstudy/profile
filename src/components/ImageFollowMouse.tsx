@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
-import sunwukong from "../assets/images/sunwukong.png";
+import followImg from "../assets/images/xiaoxiongmao.png";
 const ImageFollowMouse = () => {
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -31,7 +31,7 @@ const ImageFollowMouse = () => {
         return (
           <img
             key={index}
-            src={sunwukong}
+            src={followImg}
             alt="Follow Mouse"
             className="fixed top-4 left-4 h-12  opacity-0  z-[999]"
           />

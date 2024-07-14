@@ -4,8 +4,8 @@ import { Outlet } from "react-router-dom";
 const Navbar = lazy(() => import("./components/Navbar"));
 const Layout = () => {
   return (
-    <div className="layout w-full">
-      <header className="w-full fixed top-0  z-20 bg-transparent">
+    <div className="layout w-full bg-black">
+      <header className="w-full fixed top-0 z-20 bg-transparent">
         <Navbar />
       </header>
       <main className="relative">

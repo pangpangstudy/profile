@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
-import sunwukong from "../../assets/images/sunwukong.png";
+import eggImg from "../../assets/images/xiaoxiongmao.png";
 import { FallingHotAirBalloonsProps } from ".";
 import { useGSAP } from "@gsap/react";
 
@@ -44,8 +44,7 @@ const HotAirBalloons: React.FC<
         zIndex: 99999,
       }}
     >
-      <img src={sunwukong} alt="" width={size} height={size} />
-      <p>支持黑神话：悟空</p>
+      <img src={eggImg} alt="egg" width={size} height={size} />
     </div>
   ));
 

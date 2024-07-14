@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <div
       ref={navRef}
-      className="mx-auto navbar fixed flex justify-center items-center -translate-y-full w-full text-black bg-transparent pt-4 "
+      className="mx-auto navbar fixed flex justify-center items-center  w-full text-black bg-transparent pt-4 "
     >
       <ul className="relative flex justify-around items-center border border-black px-10 rounded-full backdrop-blur-lg backdrop-brightness-75 border-r-red-600 border-l-red-600 border-r-2 border-l-2">
         <li
