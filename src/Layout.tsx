@@ -5,7 +5,7 @@ const Navbar = lazy(() => import("./components/Navbar"));
 const Layout = () => {
   return (
     <div className="layout w-full">
-      <header className="w-full fixed top-0 text-white z-20">
+      <header className="w-full fixed top-0  z-20 bg-transparent">
         <Navbar />
       </header>
       <main className="relative">

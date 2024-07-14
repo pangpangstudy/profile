@@ -5,6 +5,7 @@ import bg from "../../assets/images/heishenhuayasuo.png";
 import sunwukong from "../../assets/images/sunwukong.png";
 import { gsap, Expo } from "gsap/all";
 import { useGSAP } from "@gsap/react";
+import video from "../../assets/heiwukongV.mp4";
 type Props = {};
 
 function Hero({}: Props) {
@@ -39,14 +40,20 @@ function Hero({}: Props) {
         duration: 1,
       })
       .to(".hero", { display: "none", duration: 0.3 })
-      .to(".content", { x: 0, ease: Expo.easeInOut, duration: 1.5 });
+      .from(".textBox", {
+        y: "-80vh",
+        ease: Expo.easeInOut,
+        backgroundColor: "#000",
+        // opacity: 0,
+        duration: 1,
+      });
   });
 
   return (
-    <div className="h-screen relative">
-      <div className="absolute top-0 right-0 w-full h-full ">
+    <div className="relative h-screen flex items-center overflow-hidden">
+      <div className="h-screen  hero absolute top-0 right-0 w-full ">
         <div
-          className="hero w-full h-full  relative flex flex-col justify-center items-center  bg-cover bg-center z-20 overflow-hidden"
+          className=" w-full h-full  relative flex flex-col justify-center items-center  bg-cover bg-center z-20 overflow-hidden"
           style={{
             backgroundImage: `url('${bg}')`,
           }}
@@ -59,19 +66,36 @@ function Hero({}: Props) {
             <div className="line h-px bg-white flex items-end justify-end">
               <img
                 src={sunwukong}
-                className="w-20 h-20 -mr-4  flex-wrap-reverse"
+                className="w-20 h-20 -mr-4  flex-wrap-reverse "
                 style={{ transform: "rotateY(180deg)" }}
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="content w-full h-screen overflow-hidden ">
-        <p className="title-lines">The greatest glory in living lies</p>
-        <p className="title-lines">not in never falling,</p>
-        <p className="title-lines">but in rising every time we fall.</p>
-        <p className="title-lines">-Nelson Mandela</p>
+      <div className="absolute top-0 left-0 right-0 bottom-0 z-10 bg-black opacity-45"></div>
+      <div className=" absolute top-0 left-0 right-0 bottom-0  z-10 flex justify-center items-center">
+        <div className="textBox uppercase text-white font-serif">
+          {"hello,world".split("").map((item, index) => {
+            return (
+              <span
+                key={index}
+                className="text-[9vw] lg:text-9xl text-transparent text-outline"
+                // bg-clip-text bg-gradient-to-r from-indigo-500  to-pink-500 stroke-current text-shadow-3d
+              >
+                {item}
+              </span>
+            );
+          })}
+        </div>
       </div>
+      <video
+        src={video}
+        className="w-full h-full object-cover object-center"
+        autoPlay
+        muted
+        loop
+      />
     </div>
   );
 }

@@ -19,11 +19,11 @@ const Navbar = () => {
   return (
     <div
       ref={navRef}
-      className="mx-auto navbar fixed flex justify-center items-center -translate-y-full w-full bg-white text-black bg-transparent pt-4 "
+      className="mx-auto navbar fixed flex justify-center items-center -translate-y-full w-full text-black bg-transparent pt-4 "
     >
-      <ul className="relative flex justify-around items-center border border-black px-10 rounded-full backdrop-blur-lg backdrop-brightness-75">
+      <ul className="relative flex justify-around items-center border border-black px-10 rounded-full backdrop-blur-lg backdrop-brightness-75 border-r-red-600 border-l-red-600 border-r-2 border-l-2">
         <li
-          className="bg-black text-white px-10 py-2  md:px-20 flex justify-center items-center cursor-pointer absolute top-full left-1/2 transform -translate-x-1/2 opacity-75"
+          className="bg-black text-white px-10 py-2  md:px-20 flex justify-center items-center cursor-pointer absolute top-full left-1/2 transform -translate-x-1/2 opacity-75 "
           style={{ clipPath: "polygon(0 0, 100% 0, 80% 100%, 20% 100%)" }}
           onClick={() => setIsNavVisible(!isNavVisible)}
         >
@@ -34,12 +34,12 @@ const Navbar = () => {
           return (
             <li
               key={item}
-              className="uppercase cursor-pointer  relative overflow-hidden"
+              className="uppercase cursor-pointer  relative overflow-hidden "
               onMouseEnter={() => {
                 gsap;
               }}
             >
-              <Link to="/" className="flex flex-col  py-2 px-4">
+              <Link to="/" className="flex flex-col  py-2 px-4 text-white">
                 <span>{item}</span>
               </Link>
             </li>
