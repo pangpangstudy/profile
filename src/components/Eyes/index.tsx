@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import { useEffect } from "react";
-import { angleC } from "../../utils";
+
 import eye from "../../assets/images/eye.png";
+import { angleC } from "@/lib/utils";
 
 function Eyes() {
   const [rotateL, setRotateL] = useState(0);
@@ -30,7 +31,7 @@ function Eyes() {
   }, []);
 
   return (
-    <div className="eyes flex flex-col items-center w-full overflow-hidden opacity-50 ">
+    <div className="eyes flex flex-col items-center w-full overflow-hidden ">
       <div className="flex items-center gap-x-10 md:gap-x-14">
         <div
           className="flex relative  w-[18vw] h-[15vw] rounded-full bg-cover bg-center "

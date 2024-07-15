@@ -1,3 +1,9 @@
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 export const angleC = (ref: any, event: MouseEvent) => {
   const rect = ref.current!.getBoundingClientRect();
   // 这里不需要添加滚动偏移量，因为getBoundingClientRect()提供的是相对于视口的位置

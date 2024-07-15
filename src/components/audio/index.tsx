@@ -22,7 +22,7 @@ function Audio({}: Props) {
     <div>
       <button
         onClick={() => handleToggleAudio()}
-        className="fixed top-4 right-4 h-12 w-12 p-2 border border-red-600 flex justify-center items-center rounded-full cursor-pointer z-20"
+        className="fixed top-4 left-4 w-8 h-8 md:h-12 md:w-12 p-1 md:p-2 border border-red-600 flex justify-center items-center rounded-full cursor-pointer z-20"
       >
         {isPlaying ? (
           <MdOutlineMusicNote color="#d7c526" className="w-full h-full" />
