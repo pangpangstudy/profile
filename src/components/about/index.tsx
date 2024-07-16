@@ -59,9 +59,9 @@ function About({}: Props) {
     return () => ctx.revert();
   }, []);
   return (
-    <div ref={aboutRef} className="mb-10">
-      <section className="about1 relative container flex flex-col w-full rounded-tl-3xl py-14 lg:py-20 overflow-hidden">
-        <h1 className="title text-center text-[#c4429e] text-5xl font-bold italic py-4 uppercase">
+    <div ref={aboutRef} className="mb-10 ">
+      <section className="about1 relative container flex flex-col w-full h-screen rounded-tl-3xl py-14 lg:py-20 overflow-hidden">
+        <h1 className="title text-center text-[#c4429e] text-3xl md:text-5xl font-bold italic py-4 uppercase px-4">
           Blockchain Technology:
         </h1>
         <div className="flex flex-col lg:flex-row w-full flex-1 justify-center items-center">
@@ -96,8 +96,8 @@ function About({}: Props) {
           </div>
         </div>
       </section>
-      <section className="about2 relative container flex flex-col w-full  rounded-3xl  border-2 border-white py-10 lg:py-20 ">
-        <h1 className="title text-center text-[#c4429e] text-5xl font-bold italic py-4 uppercase">
+      <section className="about2  relative container flex flex-col w-full  rounded-3xl  border-2 border-white py-10 lg:py-20 ">
+        <h1 className="title text-center text-[#c4429e] text-3xl md:text-5xl font-bold italic py-4 uppercase px-4">
           Frontend Technology:
         </h1>
         <div className="flex flex-col lg:flex-row w-full flex-1 justify-center items-center">

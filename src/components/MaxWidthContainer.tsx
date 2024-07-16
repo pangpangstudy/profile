@@ -9,9 +9,7 @@ function MaxWidthContainer({
   className?: string;
 }) {
   return (
-    <div className={cn(className, "container mx-auto py-20 md:py-32 px-10")}>
-      {children}
-    </div>
+    <div className={cn(className, "container mx-auto  px-10")}>{children}</div>
   );
 }
 
