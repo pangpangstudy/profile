@@ -21,7 +21,7 @@ function Loading({}: Props) {
     return () => clearInterval(id);
   }, []);
   return (
-    <div className="h-screen hero fixed top-0 right-0 w-full z-[999] overflow-hidden">
+    <div className="loading h-screen  fixed top-0 right-0 w-full z-[999] overflow-hidden">
       <div
         className="w-full h-full  relative flex flex-col justify-center items-center  bg-cover bg-right z-20 overflow-hidden"
         style={{

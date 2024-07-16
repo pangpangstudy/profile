@@ -67,6 +67,14 @@
     @apply bg-background text-foreground;
   }
 }
+@layer components {
+  .about-image {
+    -webkit-mask-image: url(./assets/images/yuan2.png);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+  }
+}
 .text-outline {
   color: transparent;
   -webkit-text-stroke: 1px white; /* 设置文本边框 */
