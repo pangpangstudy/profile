@@ -1,7 +1,5 @@
 import gsap from "gsap";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   useEffect(() => {

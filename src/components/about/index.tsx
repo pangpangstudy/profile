@@ -78,7 +78,7 @@ function About({}: Props) {
     <section
       id="skills"
       ref={containerRef}
-      className="lg:py-20  flex  w-[200vw] min-h-screen "
+      className="lg:py-20  flex flex-col md:flex-row  w-[200vw] min-h-screen "
     >
       <div className="w-1/2 flex justify-center">
         <div className="about1  w-full lg:w-[80%]  flex flex-col rounded-3xl  border-2 border-white py-10 lg:py-20 bg-[#C684D0]">
