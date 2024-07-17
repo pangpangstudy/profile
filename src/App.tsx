@@ -26,7 +26,7 @@ function App() {
     });
     window.addEventListener("load", () => {
       console.log("-----------------");
-      // ScrollTrigger.refresh();
+      ScrollTrigger.refresh();
     });
     return () => {
       window.removeEventListener("resize", () => {
@@ -34,7 +34,7 @@ function App() {
       });
       window.removeEventListener("load", () => {
         console.log("-----------------");
-        // ScrollTrigger.refresh();
+        ScrollTrigger.refresh();
       });
     };
   });
