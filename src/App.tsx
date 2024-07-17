@@ -1,4 +1,4 @@
-import { lazy, useLayoutEffect, useRef } from "react";
+import { lazy, useEffect, useLayoutEffect, useRef } from "react";
 import ImageFollowMouse from "./components/ImageFollowMouse";
 import Hero from "./components/hero";
 import Audio from "./components/audio";
@@ -12,10 +12,32 @@ import Spider from "./components/spider";
 import Skills from "./components/skill";
 import Hobby from "./components/Hobby";
 const EasterEgg = lazy(() => import("./components/EasterEgg"));
-gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const mainRef = useRef<HTMLDivElement>(null);
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.addEventListener("refresh", () => {
+    window.scrollTo(0, 0);
+  });
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      ScrollTrigger.refresh();
+    });
+    window.addEventListener("load", () => {
+      console.log("-----------------");
+      // ScrollTrigger.refresh();
+    });
+    return () => {
+      window.removeEventListener("resize", () => {
+        ScrollTrigger.refresh();
+      });
+      window.removeEventListener("load", () => {
+        console.log("-----------------");
+        // ScrollTrigger.refresh();
+      });
+    };
+  });
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       const tl = gsap.timeline({});
