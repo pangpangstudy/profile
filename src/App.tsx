@@ -17,8 +17,6 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   const mainRef = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
-    // Scroll to top on initial load
-    window.scrollTo(0, 0);
     let ctx = gsap.context(() => {
       const tl = gsap.timeline({});
       tl.to(".load .line", { width: "100%", duration: 2, ease: "none" })
@@ -31,7 +29,6 @@ function App() {
         })
         .from(".heroContainer .eyes", { opacity: 0, duration: 1 })
         .then(() => {
-          window.scrollTo(0, 0);
           document.body.classList.add("loading-complete");
         });
     }, mainRef);
