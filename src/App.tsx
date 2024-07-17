@@ -16,16 +16,11 @@ const EasterEgg = lazy(() => import("./components/EasterEgg"));
 function App() {
   const mainRef = useRef<HTMLDivElement>(null);
   gsap.registerPlugin(ScrollTrigger);
-
-  ScrollTrigger.addEventListener("refresh", () => {
-    window.scrollTo(0, 0);
-  });
   useEffect(() => {
     window.addEventListener("resize", () => {
       ScrollTrigger.refresh();
     });
     window.addEventListener("load", () => {
-      console.log("-----------------");
       ScrollTrigger.refresh();
     });
     return () => {
@@ -33,7 +28,6 @@ function App() {
         ScrollTrigger.refresh();
       });
       window.removeEventListener("load", () => {
-        console.log("-----------------");
         ScrollTrigger.refresh();
       });
     };
