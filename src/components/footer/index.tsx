@@ -1,4 +1,3 @@
-"use client";
 import { FaTwitter } from "react-icons/fa";
 import { MdAttachEmail } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -11,13 +10,13 @@ const Footer = () => {
       <MaxWidthContainer>
         <div className=" flex flex-col items-center gap-4 md:flex-row md:justify-between">
           <div className="flex gap-x-2">
-            <Link to="">
+            <Link to="#">
               <MdAttachEmail size={32} color="skyblue" />
             </Link>
-            <Link to="">
+            <Link to="#">
               <FaTwitter size={32} color="skyblue" />
             </Link>
-            <Link to="">
+            <Link to="#">
               <FaTelegramPlane size={32} color="skyblue" />
             </Link>
           </div>

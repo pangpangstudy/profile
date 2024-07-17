@@ -1,8 +1,8 @@
-import { useEffect } from "react";
 import { gsap } from "gsap";
 import followImg from "../assets/images/xiaoxiongmao.png";
+import { useGSAP } from "@gsap/react";
 const ImageFollowMouse = () => {
-  useEffect(() => {
+  useGSAP(() => {
     const handleMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event;
       let targets = gsap.utils.toArray(".imgContainer img");

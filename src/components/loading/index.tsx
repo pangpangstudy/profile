@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import hreobg from "../../assets/images/herobg.gif";
 import sunwukong from "../../assets/images/sunwukong.png";
-// import { gsap } from "gsap/all";
-// import { useGSAP } from "@gsap/react";
+
 type Props = {};
 
 function Loading({}: Props) {

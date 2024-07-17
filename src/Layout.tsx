@@ -14,7 +14,7 @@ const Layout = () => {
     return null;
   }
   return (
-    <div className="App layout w-full bg-black">
+    <div className=" bg-black max-w-full overflow-hidden">
       <header className="w-full fixed top-0 z-20 bg-transparent">
         <Navbar />
       </header>

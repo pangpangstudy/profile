@@ -1,26 +1,20 @@
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
-  const navRef = useRef(null);
-  useGSAP(() => {
-    if (isNavVisible) {
-      gsap.to(navRef.current, { y: 0, duration: 0.5, ease: "power2.inOut" });
-    } else {
-      gsap.to(navRef.current, {
-        y: "-100%",
-        duration: 0.5,
-        ease: "power2.inOut",
-      });
-    }
-  }, [isNavVisible]);
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setIsNavVisible(true);
+    }, 5500);
+    return () => clearTimeout(id);
+  }, []);
   return (
     <div
-      ref={navRef}
-      className="mx-auto navbar fixed flex justify-center items-center  w-full text-black bg-transparent pt-4 text-xs md:text-base lg:text-lg"
+      className={`mx-auto navbar fixed flex justify-center items-center  w-full text-black bg-transparent pt-4 text-xs md:text-base lg:text-lg ${
+        isNavVisible ? "" : "-translate-y-full"
+      } duration-700 transition-all`}
     >
       <ul className="relative flex justify-around items-center border border-black px-10 rounded-full backdrop-blur-lg backdrop-brightness-75 border-r-red-600 border-l-red-600 border-r-2 border-l-2">
         <li
