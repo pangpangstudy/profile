@@ -30,7 +30,7 @@ const Spider = forwardRef<HTMLDivElement, Props>(
       };
     }, [ref]);
     return (
-      <div className="h-fit spider w-[16vw] md:w-[10vw] fixed top-0 right-0 flex justify-center">
+      <div className="h-fit spider w-[16vw] md:w-[10vw] fixed top-0 right-0 flex justify-center z-[999]">
         <div className="relative h-full  flex flex-col items-center justify-end">
           <span className="flex-1 bg-white w-[1px] opacity-50"></span>
           <img src={zhizhu} alt="spider" />
