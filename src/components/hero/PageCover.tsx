@@ -42,6 +42,7 @@ function PageCover({}: Props) {
   }, []);
   return (
     <section
+      id="about"
       ref={pageCover}
       className="w-screen h-screen relative md:h-screen text-white rounded-tl-3xl rounded-tr-3xl overflow-hidden border-t-2 border-white flex items-center
       "

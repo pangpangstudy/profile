@@ -25,7 +25,7 @@ const Navbar = () => {
           MENU
         </li>
 
-        {["Home", "About", "Skill", "Hobby"].map((item) => {
+        {["Home", "About", "Skills", "Hobby"].map((item) => {
           return (
             <li
               key={item}
@@ -34,9 +34,12 @@ const Navbar = () => {
                 gsap;
               }}
             >
-              <Link to="/" className="flex flex-col  py-2 px-4 text-white">
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="flex flex-col  py-2 px-4 text-white"
+              >
                 <span>{item}</span>
-              </Link>
+              </a>
             </li>
           );
         })}

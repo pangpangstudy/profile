@@ -76,6 +76,7 @@ function About({}: Props) {
   }, []);
   return (
     <section
+      id="skills"
       ref={containerRef}
       className="lg:py-20  flex  w-[200vw] min-h-screen "
     >
