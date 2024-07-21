@@ -1,6 +1,6 @@
 import { forwardRef, RefObject, useEffect } from "react";
 import zhizhu from "../../assets/images/zhizhu.png";
-import gsap from "gsap/all";
+import { gsap } from "gsap/all";
 
 type Props = {};
 const Spider = forwardRef<HTMLDivElement, Props>(

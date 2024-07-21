@@ -1,5 +1,5 @@
 import { skillsData } from "@/lib/utils";
-import gsap from "gsap/all";
+import { gsap } from "gsap/all";
 import { useLayoutEffect, useRef } from "react";
 import bg from "../../assets/images/fengjing.jpg";
 export default function Skills() {

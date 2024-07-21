@@ -1,5 +1,6 @@
+import { lazy } from "react";
 import video from "../../assets/nanhe.mp4";
-import Eyes from "../Eyes";
+const Eyes = lazy(() => import("../Eyes"));
 
 type Props = {};
 

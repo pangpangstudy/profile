@@ -1,18 +1,17 @@
 import { lazy, useEffect, useLayoutEffect, useRef } from "react";
 import ImageFollowMouse from "./components/ImageFollowMouse";
 import Hero from "./components/hero";
-import Audio from "./components/audio";
 import PageCover from "./components/hero/PageCover";
 import Loading from "./components/loading";
-import About from "./components/about";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Footer from "./components/footer";
-import Spider from "./components/spider";
-import Skills from "./components/skill";
-import Hobby from "./components/Hobby";
 const EasterEgg = lazy(() => import("./components/EasterEgg"));
-
+const About = lazy(() => import("./components/about"));
+const Skills = lazy(() => import("./components/skill"));
+const Hobby = lazy(() => import("./components/Hobby"));
+const Audio = lazy(() => import("./components/audio"));
+const Spider = lazy(() => import("./components/spider"));
 function App() {
   const mainRef = useRef<HTMLDivElement>(null);
   gsap.registerPlugin(ScrollTrigger);
